@@ -1,0 +1,38 @@
+{
+  "name": "resolution",
+  "version": "0.0.1",
+  "description":
+    "TypeScript backend and frontend. React, Express with Parcel Bundler",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dragosbulugean/resolution"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start-api",
+    "start-app": "parcel ./app/index.html",
+    "start-api": "nodemon -e ts --watch api --exec ts-node api/index.ts",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean && npm run typecheck",
+    "build": "parcel build ./app/index.html --public-url '/'",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["TypeScript", "React", "Express", "Parcel", "Prettier"],
+  "author": "Dragos Bulugean",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.39",
+    "@types/react": "^16.0.29",
+    "@types/react-dom": "^16.0.3",
+    "nodemon": "^1.12.5",
+    "parcel-bundler": "^1.2.0",
+    "prettier": "^1.9.2",
+    "ts-node": "^4.0.1",
+    "typescript": "^2.6.2"
+  }
+}

@@ -1,0 +1,13 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+#react-app {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+}
